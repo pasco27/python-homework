@@ -40,7 +40,7 @@ with open(csvpath, 'r') as csvfile:
     total_pl = 0
     for row in csv_reader: 
         total_pl += float(row[1])
-        formatted_total_pl = "{:.2f}".format(total_pl)
+        formatted_total_pl = "{:,.2f}".format(total_pl) # I'm using the same formatting here as below but still floats to 1 decimal
     print(f'Total P/L : ${total_pl}')
 
 # average month/month P/L over entire dataet 
@@ -55,14 +55,28 @@ with open(csvpath, 'r') as csvfile:
         avg_difference = (difference/(row_count))
         formatted_avg_diff = "{:.2f}".format(avg_difference) 
     print(f'Average Change: ${formatted_avg_diff}')
-## I'm trying to round this number but it will not??! 
 
+# greatest increase and decrease in profits, with date and amount
 
-# greatest increase in profits, with date and amount
-# It may help here to append another column?? 
-#### can I append "difference 
+with open(csvpath, 'r') as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter = ',')
+    csv_header = next(csv_reader) 
+    great_increase_row = max(csv_reader, key = lambda row: int(row[1]))
+    print(f'Greatest Increase in Profits: {great_increase_row}')  # Need to work on this more to get $ in front 
+ 
+with open(csvpath, 'r') as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter = ',')
+    csv_header = next(csv_reader)
 
-# greatest decrease in losses, with date and amount 
+    great_decrease_row = min(csv_reader, key = lambda row: int(row[1]))
+    print(f'Greatset Decrease in Profits: {great_decrease_row}')
+ 
+ #   max_pl, min_pl = [], [] ????
+  #  for row in csv_reader:
+   #     max_pl.append(float(row[1]))   # not quite LOL
+    #    min_pl.append(float(row[1]))
+    #print(f'Greatest Increase in Profits: ${max_pl}')
+    #print(f'Greatest Decrease in Profits: ${min_pl}')
 
 
 # export a text file with results 
