@@ -20,10 +20,8 @@ with open(csvpath, 'r') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter = ',')
     
 # I used this block of code to print the csv, checking format.
- #   num_rows = 0
  #   for row in csv_reader:
- #       num_rows += 1
- #       print(num_months)
+ #       print(row)
  # 
  # I see there are two columns, and that the first row is a header titles 'Date' & 'Profit / Loss'    
  # Knowing that the first row is a header and seeing that the column1 data is monthly,
@@ -34,8 +32,7 @@ with open(csvpath, 'r') as csvfile:
     row_count = len(data) 
     print(f'Total Months : {row_count}')
 
-
-# total P/L for the dataset is the summation of that column 
+# net P/L for the dataset is the summation of that column 
 
 with open(csvpath, 'r') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter = ',')
@@ -43,33 +40,29 @@ with open(csvpath, 'r') as csvfile:
     total_pl = 0
     for row in csv_reader: 
         total_pl += float(row[1])
+        formatted_total_pl = "{:.2f}".format(total_pl)
     print(f'Total P/L : ${total_pl}')
-
-
-######## --- csvreader.__next__()
-
-
-
-
-## analyze the total P/L for the entire dataset 
-# net total P/L over entire dataset 
-
 
 # average month/month P/L over entire dataet 
 
+with open(csvpath, 'r') as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter = ',')
+    csv_header = next(csv_reader) 
+    previous_row = 0 
+    for row in csv_reader:
+        difference = float(row[1]) - previous_row
+        previous_row = float(row[1])
+        avg_difference = (difference/(row_count))
+        formatted_avg_diff = "{:.2f}".format(avg_difference) 
+    print(f'Average Change: ${formatted_avg_diff}')
+## I'm trying to round this number but it will not??! 
+
 
 # greatest increase in profits, with date and amount
-
+# It may help here to append another column?? 
+#### can I append "difference 
 
 # greatest decrease in losses, with date and amount 
 
 
-
-
 # export a text file with results 
-
-
-
-
-
-
