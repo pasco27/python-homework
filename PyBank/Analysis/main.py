@@ -83,3 +83,15 @@ with open(csvpath, 'r') as csvfile:
 # export a text file with results 
 # I completed this task after the program was written by going back and adding the file = f argument 
 # to the print statements. 
+
+
+
+
+
+
+#######################
+
+# I think there's a much better way to do to this. 
+# Noted a good youtube on lists. 
+# Wondering if I can create a list of both month and P/L values.
+# Can then easy find the min / max of the P/L list

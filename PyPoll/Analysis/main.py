@@ -23,28 +23,97 @@ csvpath = os.path.join('..', 'Resources', 'election_data.csv')
       #  if(i >= 5):
        #     break
 
-#    csv_header = next(csv_reader)
-#    data = list(csv_reader)
-#    row_count = len(data)
-#    print(f'Total Votes: {row_count}')
+    csv_header = next(csv_reader)
+    data = list(csv_reader)
+    row_count = len(data)
+    print(f'Total Votes: {row_count}')
 
-#    print("-"*27)
+    print("-"*27)
 
 
     #did some studying after my first program -- I think I can use lists as a useful item here.
-voter_id = []
-county = []
+
 candidates = []
+Khan = []
+Correy = []
+Li = []
+OTooley = []
 
 with open(csvpath, 'r') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter = ',')
     for row in csv_reader:
-        voter_id.append(row[0])
-        county.append(row[1])
         candidates.append(row[2])
 
     for row in candidates:
-        totals(row[0])
+        if row == "Khan"
+        Khan.append[(row[0])
+
+        else if row == "Correy"
+        Correy.append(row[0])
+
+        else if row == "Li"
+        Li.append(row[0])
+
+        else
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ #   cn = Counter(candidates)
+ #   for k,v in cn.items:
+ #       print("[{}][{}].format(k,v)
+
+ # ^^^^ This counter would've been badass had it worked! 
+
+
+
+
+
+
+     ##??? 
+     #   candidate = 0
+     
+     #   previous_cand = 0
+     #   for candidate in candidates
+     #   if candidate = previous_cand:
+     #       candidate = candidate + 1
+     #       else:   
+
+
+
+
+    #    counter = sum(a[i: i+ chars] == value for i in range(len(a) - chars + 1))
+
+
+
+
+
+
+     #   A = candidates.sorted()
+      #  A.sort(key = lamba x:A.count)
+      #  [x, candidates.count(x)] for x in set(candidates)]
+      #  print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      #   print(len(candidates))  <- this prints the whole list numerically, not just the total length
 
      #   candidates.sort(key = len)
