@@ -45,28 +45,28 @@ with open(csvpath, 'r') as csvfile:
         candidates.append(row[2])
 
     for row in candidates:
-        if row == "Khan"
-        Khan.append[(row[0])
-        Total_Khan = len(Khan)
+        if row == "Khan":
+            Khan.append(row[0])
+            Total_Khan = len(Khan)
+            print(Total_Khan)
+
         
-        else if row == "Correy"
-        Correy.append(row[0])
-        Total_Correy = len(Correy)
+ #       else if row == "Correy":
+ #           Correy.append(row[0])
+ #           Total_Correy = len(Correy)
 
-        else if row == "Li"
-        Li.append(row[0])
-        Total_Li = len(Li)
+ #       else if row == "Li":
+ #           Li.append(row[0])
+ #           Total_Li = len(Li)
 
-        else
-        OTooley(row[0])
-        Total_OTooley = len(OTooley)
-
-
+ #       else:
+ #           OTooley(row[0])
+ #           Total_OTooley = len(OTooley)
    
-        print(f'Khan: {Khan_percentage} {Total_Khan}')
-        print(f'Correy: {Correy_percentage} {Total_Correy}')
-        print(f'Li: {Li_percentage} {Total_Li}')
-        print(f'O\'Tooley: {OTooley_percentage} {Total_OTooley}')
+ #       print(f'Khan: {Khan_percentage} {Total_Khan}')
+ #       print(f'Correy: {Correy_percentage} {Total_Correy}')
+ #       print(f'Li: {Li_percentage} {Total_Li}')
+ #       print(f'O\'Tooley: {OTooley_percentage} {Total_OTooley}')
 
    
    
