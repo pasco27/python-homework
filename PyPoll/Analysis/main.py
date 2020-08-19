@@ -15,8 +15,8 @@ print("-"*27)
 # print a the csv file
 csvpath = os.path.join('..', 'Resources', 'election_data.csv')
 
-#with open(csvpath, 'r') as csvfile:
-#    csv_reader = csv.reader(csvfile, delimiter = ',')
+with open(csvpath, 'r') as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter = ',')
 
     #for i,row in enumerate(csv_reader):
      #   print(row)
