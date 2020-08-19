@@ -31,8 +31,6 @@ with open(csvpath, 'r') as csvfile:
     print("-"*27)
 
 
-    #did some studying after my first program -- I think I can use lists as a useful item here.
-
 candidates = []
 Khan = []
 Correy = []
@@ -50,23 +48,35 @@ with open(csvpath, 'r') as csvfile:
             Total_Khan = len(Khan)
             print(Total_Khan)
 
-        
- #       else if row == "Correy":
- #           Correy.append(row[0])
- #           Total_Correy = len(Correy)
+            Khan_percentage = (Total_Khan / row_count)*100
 
- #       else if row == "Li":
- #           Li.append(row[0])
- #           Total_Li = len(Li)
+    for row in candidates:   
+        if row == "Correy":
+            Correy.append(row[0])
+            Total_Correy = len(Correy)
+            print()
 
- #       else:
- #           OTooley(row[0])
- #           Total_OTooley = len(OTooley)
-   
- #       print(f'Khan: {Khan_percentage} {Total_Khan}')
- #       print(f'Correy: {Correy_percentage} {Total_Correy}')
- #       print(f'Li: {Li_percentage} {Total_Li}')
- #       print(f'O\'Tooley: {OTooley_percentage} {Total_OTooley}')
+            Correy_percentage = (Total_Correy / row_count)*100
+
+    for row in candidates:
+        if row == "Li":
+            Li.append(row[0])
+            Total_Li = len(Li)
+
+            Li_percentage = (Total_Li / row_count)*100
+
+
+    for row in candidates:
+        if row == "O'Tooley"
+            OTooley(row[0])
+            Total_OTooley = len(OTooley)
+            OTooley_percentage = (Total_OTooley / row_count)*100
+
+
+        print(f'Khan: {Khan_percentage} {Total_Khan}')
+        print(f'Correy: {Correy_percentage} {Total_Correy}')
+        print(f'Li: {Li_percentage} {Total_Li}')
+        print(f'O\'Tooley: {OTooley_percentage} {Total_OTooley}')
 
    
    
