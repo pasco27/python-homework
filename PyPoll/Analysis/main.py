@@ -67,12 +67,22 @@ with open(csvpath, 'r') as csvfile:
             Total_OTooley = len(OTooley)
             OTooley_percentage = (Total_OTooley / row_count)*100
 
+    totals = [Total_Khan, Total_Correy, Total_Li, Total_OTooley]
+    winner = max(totals)
+
+
     print(f'Khan: {Khan_percentage}% ({Total_Khan})')
     print(f'Correy: {Correy_percentage}% ({Total_Correy})')
     print(f'Li: {Li_percentage}% ({Total_Li})')
     print(f'OTooley: {OTooley_percentage}% ({Total_OTooley})')
 
-   
+    print("-"*27)
+
+    print(f'Winner: {winner}')
+
+    print("-"*27)
+
+### now need to work export to txt file and printing winner 
 
    
 
@@ -80,7 +90,7 @@ with open(csvpath, 'r') as csvfile:
 
 
 
-   
+
    
    
  #   cn = Counter(candidates)
