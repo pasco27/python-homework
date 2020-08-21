@@ -41,6 +41,7 @@ with open(csvpath, 'r') as csvfile:
 
     print("-"*27, file = f)
 
+    # I decided to fill lists from candidate and count them for each
     for row in candidates:
         if row == "Khan":
             Khan.append(row[0])
@@ -62,10 +63,11 @@ with open(csvpath, 'r') as csvfile:
             Total_OTooley = len(OTooley)
             OTooley_percentage = (Total_OTooley / row_count)*100
 
+    # winner = max votes!
     totals = [Total_Khan, Total_Correy, Total_Li, Total_OTooley]
     winner = max(totals)
 
-
+    # print the tables 
     print(f'Khan: {"{:,.2f}".format(Khan_percentage)}% ({Total_Khan})', file = f)
     print(f'Correy: {"{:,.2f}".format(Correy_percentage)}% ({Total_Correy})', file = f)
     print(f'Li: {"{:,.2f}".format(Li_percentage)}% ({Total_Li})', file = f)
@@ -90,7 +92,7 @@ with open(csvpath, 'r') as csvfile:
 ### I know I'm "probably" supposed to print with this function
 ### Could not get it to work
 
-   
+
 
 
 
