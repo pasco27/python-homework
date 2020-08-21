@@ -75,6 +75,12 @@ with open(csvpath, 'r') as csvfile:
    
 
    
+
+
+
+
+
+   
    
    
  #   cn = Counter(candidates)
@@ -82,83 +88,4 @@ with open(csvpath, 'r') as csvfile:
  #       print("[{}][{}].format(k,v)
 
  # ^^^^ This counter would've been badass had it worked! 
-
-
-
-
-
-
-     ##??? 
-     #   candidate = 0
-     
-     #   previous_cand = 0
-     #   for candidate in candidates
-     #   if candidate = previous_cand:
-     #       candidate = candidate + 1
-     #       else:   
-
-
-
-
-    #    counter = sum(a[i: i+ chars] == value for i in range(len(a) - chars + 1))
-
-
-
-
-
-
-     #   A = candidates.sorted()
-      #  A.sort(key = lamba x:A.count)
-      #  [x, candidates.count(x)] for x in set(candidates)]
-      #  print(x)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     #   print(len(candidates))  <- this prints the whole list numerically, not just the total length
-
-     #   candidates.sort(key = len)
-     #   print(candidates)              <- this prints every line name 
-
-  #  for name in zip(candidates):
-   #     print(name)
-
-
-
-
-    #for now, we're really only working with the candidate list
-
- #   from collections import Counter
- #   Counter(candidates)
-
-
-    #candidate.sort()
-    #-or-
- #   sorted(candidates)
-
-
-   #for candidate in candidates:
-   #    print(candidate)
-
-
-
-
-
-
-    # need to make a new list with all of these
-    # then sort 
-    # can interate over each to pull the 
-
-    # can loop through each list; each name would be counted 
 
