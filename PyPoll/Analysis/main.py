@@ -70,7 +70,7 @@ with open(csvpath, 'r') as csvfile:
     print(f'Khan: {Khan_percentage}% ({Total_Khan})')
     print(f'Correy: {Correy_percentage}% ({Total_Correy})')
     print(f'Li: {Li_percentage}% ({Total_Li})')
-    # print(f'OTooley: {OTooley_percentage}% ({Total_OTooley})')
+    print(f'OTooley: {OTooley_percentage}% ({Total_OTooley})')
 
    
 
