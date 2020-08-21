@@ -80,7 +80,7 @@ with open(csvpath, 'r') as csvfile:
     #print(f'Greatest Decrease in Profits: ${min_pl}')
 
 
-# export a text file with results 
+# exported a text file with results to Analysis folder! 
 # I completed this task after the program was written by going back and adding the file = f argument 
 # to the print statements. 
 

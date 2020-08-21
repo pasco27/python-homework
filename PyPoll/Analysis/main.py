@@ -6,29 +6,26 @@
 import os
 import csv
 
+f = open("pypoll_output.txt", "a")
 
 # print a header for table cleanliness 
-print("-"*27)
-print("Election Results")
-print("-"*27)
+print("-"*27, file = f)
+print("Election Results", file = f)
+print("-"*27, file = f)
 
 # print a the csv file
 csvpath = os.path.join('..', 'Resources', 'election_data.csv')
 
+
 with open(csvpath, 'r') as csvfile:
     csv_reader = csv.reader(csvfile, delimiter = ',')
-
+    csv_header = next(csv_reader)
     #for i,row in enumerate(csv_reader):
      #   print(row)
       #  if(i >= 5):
        #     break
 
-    csv_header = next(csv_reader)
-    # data = list(csv_reader)
-    # row_count = len(data)
-
-
-        #or move these up above 18
+    # or move these up above 18
     candidates = []
     Khan = []
     Correy = []
@@ -36,36 +33,30 @@ with open(csvpath, 'r') as csvfile:
     OTooley = []
     row_count = 0
     
-        ## with open(csvpath, 'r') as csvfile:
-        ##    csv_reader = csv.reader(csvfile, delimiter = ',')
     for row in csv_reader:
-     #   print(row)
         candidates.append(row[2])
         row_count += 1 
 
-    print(f'Total Votes: {row_count}')
+    print(f'Total Votes: {row_count}', file = f)
 
-    print("-"*27)
+    print("-"*27, file = f)
 
     for row in candidates:
         if row == "Khan":
             Khan.append(row[0])
             Total_Khan = len(Khan)
             Khan_percentage = (Total_Khan / row_count)*100
-  
-           #   for row in candidates:   
+       
         if row == "Correy":
             Correy.append(row[0])
             Total_Correy = len(Correy)
             Correy_percentage = (Total_Correy / row_count)*100
-        
-         #  for row in candidates:
+    
         if row == "Li":
             Li.append(row[0])
             Total_Li = len(Li)
             Li_percentage = (Total_Li / row_count)*100
-      
-            #   for row in candidates:
+    
         if row == "O'Tooley":
             OTooley.append(row[0])
             Total_OTooley = len(OTooley)
@@ -75,35 +66,38 @@ with open(csvpath, 'r') as csvfile:
     winner = max(totals)
 
 
-    print(f'Khan: {"{:,.2f}".format(Khan_percentage)}% ({Total_Khan})')
-    print(f'Correy: {Correy_percentage}% ({Total_Correy})')
-    print(f'Li: {Li_percentage}% ({Total_Li})')
-    print(f'OTooley: {OTooley_percentage}% ({Total_OTooley})')
+    print(f'Khan: {"{:,.2f}".format(Khan_percentage)}% ({Total_Khan})', file = f)
+    print(f'Correy: {"{:,.2f}".format(Correy_percentage)}% ({Total_Correy})', file = f)
+    print(f'Li: {"{:,.2f}".format(Li_percentage)}% ({Total_Li})', file = f)
+    print(f'OTooley: {"{:,.2f}".format(OTooley_percentage)}% ({Total_OTooley})', file =f)
 
-    print("-"*27)
+    print("-"*27, file = f)
 
     if winner == Total_Khan:
-        print("Winner: Khan")
+        print("Winner: Khan", file = f)
     if winner == Total_Correy:
-        print("Winner: Correy")
+        print("Winner: Correy", file = f)
     if winner == Total_Li:
-        print("Winner: Li")
+        print("Winner: Li", file = f)
     if winner == Total_OTooley:
-        print("Winner: OTooley")
+        print("Winner: OTooley", file = f)
 
-    print("-"*27)
-
-### now need to work export to txt file  AND formatting % 
-
-## with open(outpath, 'w') as csvfile:
-   
+    print("-"*27, file = f)
 
 
 
-
-
+### with open(outpath, 'w') as csvfile:
+### I know I'm "probably" supposed to print with this function
+### Could not get it to work
 
    
+
+
+
+
+
+
+##########   
    
  #   cn = Counter(candidates)
  #   for k,v in cn.items:
